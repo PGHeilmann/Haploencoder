@@ -1,4 +1,3 @@
-# main.py  (or keep the original filename)
 import os
 import numpy as np
 import pandas as pd
@@ -9,8 +8,6 @@ import torch.optim as optim
 
 # Import Custom Classes
 import classes as cs
-
-os.chdir("C:/Users/sf8642/Desktop/Haploencoder/data/technow")
 
 # --------------------
 # Config
@@ -161,3 +158,4 @@ for it in range(NUM_ITERS):
                 file.write(row_str + "\n")
 
         torch.save(model, os.path.join(OUT_DIR, f"SS_Model_{it + 1}.pth"))
+
