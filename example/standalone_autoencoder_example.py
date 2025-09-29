@@ -12,7 +12,7 @@ import classes as cs
 # --------------------
 # Config
 # --------------------
-DATA_DIR = "."  # directory containing the data files below
+DATA_DIR = "data"  # directory containing the data files below
 MARKERS_FILE = "hybrids.txt"         # space-separated marker data
 BLOCKS_FILE = "LD07FL.csv"           # tab-separated, has column "Markers" that contain block assignment
 TARGETS_FILE = "Y_data.csv"          # space-separated, column "GY" in the example
@@ -158,6 +158,7 @@ for it in range(NUM_ITERS):
                 file.write(row_str + "\n")
 
         torch.save(model, os.path.join(OUT_DIR, f"SS_Model_{it + 1}.pth"))
+
 
 
 
