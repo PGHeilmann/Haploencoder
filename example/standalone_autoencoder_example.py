@@ -13,16 +13,16 @@ import classes as cs
 # Config
 # --------------------
 DATA_DIR = "ae"  # directory containing the data files below
-MARKERS_FILE = "hybrids.txt"         # space-separated
-BLOCKS_FILE = "LD07FL.csv"           # tab-separated, has column "Markers"
-TARGETS_FILE = "Y_data.csv"          # space-separated, column "GY" (assumed first col)
+MARKERS_FILE = "hybrids.txt"         # space-separated marker data
+BLOCKS_FILE = "LD07FL.csv"           # tab-separated, has column "Markers" that contain block assignment
+TARGETS_FILE = "Y_data.csv"          # space-separated, column "GY" in the example
 CV_INDEX_FILE = "TrainTestIndex.csv" # space-separated, each col is a CV iteration
 
 BATCH_SIZE = 64
 LR = 1e-3
 L2_LAMBDA = 1e-3
 NUM_EPOCHS = 10
-NUM_ITERS = 100  # will be clipped to number of columns in TrainTestIndex.csv
+NUM_ITERS = 100
 
 OUT_DIR = "."  # outputs saved here
 
@@ -158,4 +158,5 @@ for it in range(NUM_ITERS):
                 file.write(row_str + "\n")
 
         torch.save(model, os.path.join(OUT_DIR, f"SS_Model_{it + 1}.pth"))
+
 
