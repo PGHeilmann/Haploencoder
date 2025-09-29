@@ -1,5 +1,5 @@
 # Haploencoder
-Github repository for the paper "Haplotype-based Autoencoders Can Reduce the Dataset Dimension and Estimate Haplotype Block Effects" by Heilmann et al (2025). This repository contains the unpublished datasets of this research article as well as a standalone example of the application of the semi-supervised autoencoder based on a public dataset. 
+Github repository for the paper "Haplotype-based Autoencoders Can Reduce the Dataset Dimension and Estimate Haplotype Block Effects" by Heilmann et al (2025). This repository contains the unpublished datasets of this research article as well as a standalone example of the application of the semi-supervised autoencoder based on a public dataset. To ensure wide applicability, the script is aimed at CPU-based training. However, GPU-based training is recommended, if possible.
 
 ---
 
